@@ -56,7 +56,7 @@ const [output,setOutput  ] = useState("null");
       <div className="passlength">
       <p>Select Password length</p>
       <select className="option"onChange={(e)=>{setLength(e.target.value)}}>
-        <option value="2">0</option>
+        <option value="0">0</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
