@@ -8,8 +8,7 @@ const [output,setOutput  ] = useState("null");
         const [isLowerChecked,setLowerChecked]= useState(false);
         const [isNumberChecked,setNumberChecked]= useState(false);
         const [isSymbolChecked,setSymbolChecked]= useState(false);
-    
-    let lengthVar = 0;
+        const [ length,setLength ] = useState(0);
      const passwordGenerate = () => {
   
     const upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -17,7 +16,7 @@ const [output,setOutput  ] = useState("null");
     const number = "0123456789";
     const symbol = "!@#$%&*";
     let finalChar ="";
-    let length = lengthVar;
+    
     let password = "";
 
     if (isUpperChecked === true){
@@ -56,7 +55,7 @@ const [output,setOutput  ] = useState("null");
       <br />
       <div className="passlength">
       <p>Select Password length</p>
-      <select className="option"onChange={(e)=>{lengthVar=e.target.value}}>
+      <select className="option"onChange={(e)=>{setLength(e.target.value)}}>
         <option value="2">0</option>
         <option value="2">2</option>
         <option value="3">3</option>
